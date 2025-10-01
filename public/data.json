@@ -1,0 +1,92 @@
+[
+  {
+    "ticket_id": "#1011",
+    "issue_title": "Forgot Password Link Not Working",
+    "issue_description": "User requested a password reset but the link received in the email leads to a 404 error page. Affects access to the application.",
+    "priority": "HIGH PRIORITY",
+    "status": "Open",
+    "assigned_agent": "Alex Johnson",
+    "date_created": "1/25/2024"
+  },
+  {
+    "ticket_id": "#1012",
+    "issue_title": "Subscription Tier Mismatch",
+    "issue_description": "Customer paid for the 'Pro' tier but their account is still displaying the 'Basic' features and limits.",
+    "priority": "HIGH PRIORITY",
+    "status": "In-Progress",
+    "assigned_agent": "Benjamin Chen",
+    "date_created": "1/26/2024"
+  },
+  {
+    "ticket_id": "#1013",
+    "issue_title": "Incorrect Tax Calculation on Invoice",
+    "issue_description": "The sales tax applied to the January invoice is incorrect based on the customer's region/VAT ID.",
+    "priority": "MEDIUM PRIORITY",
+    "status": "Open",
+    "assigned_agent": "Chloe Davis",
+    "date_created": "1/26/2024"
+  },
+  {
+    "ticket_id": "#1014",
+    "issue_title": "Mobile App Freezing on Checkout",
+    "issue_description": "When attempting to finalize a purchase on the Android app (version 4.2), the app freezes indefinitely on the final checkout screen.",
+    "priority": "HIGH PRIORITY",
+    "status": "Open",
+    "assigned_agent": "Daniel Wilson",
+    "date_created": "1/27/2024"
+  },
+  {
+    "ticket_id": "#1015",
+    "issue_title": "Missing Order History",
+    "issue_description": "Customer reports that orders placed prior to December 2023 are no longer visible in their account's order history section.",
+    "priority": "MEDIUM PRIORITY",
+    "status": "In-Progress",
+    "assigned_agent": "Ella Rodriguez",
+    "date_created": "1/27/2024"
+  },
+  {
+    "ticket_id": "#1016",
+    "issue_title": "Profile Picture Upload Fails Intermittently",
+    "issue_description": "Uploading a new profile picture fails about 50% of the time with a generic 'Upload Error' message.",
+    "priority": "LOW PRIORITY",
+    "status": "Open",
+    "assigned_agent": "Felix Green",
+    "date_created": "1/28/2024"
+  },
+  {
+    "ticket_id": "#1017",
+    "issue_title": "Billing Address Update Reverts",
+    "issue_description": "Customer attempted to change their billing address, the change saves momentarily, but then reverts to the old address upon refreshing the page.",
+    "priority": "MEDIUM PRIORITY",
+    "status": "In-Progress",
+    "assigned_agent": "Grace Hall",
+    "date_created": "1/28/2024"
+  },
+  {
+    "ticket_id": "#1018",
+    "issue_title": "Cannot Disable Auto-Renewal",
+    "issue_description": "The toggle to turn off subscription auto-renewal appears greyed out or disabled in the account settings page.",
+    "priority": "HIGH PRIORITY",
+    "status": "Open",
+    "assigned_agent": "Henry King",
+    "date_created": "1/29/2024"
+  },
+  {
+    "ticket_id": "#1019",
+    "issue_title": "Duplicate Charge on Credit Card",
+    "issue_description": "Customer was charged twice for the same monthly subscription fee on 1/29/2024. Requests a refund for the duplicate charge.",
+    "priority": "HIGH PRIORITY",
+    "status": "Open",
+    "assigned_agent": "Ivy Lopez",
+    "date_created": "1/29/2024"
+  },
+  {
+    "ticket_id": "#1020",
+    "issue_title": "Unable to Download Statement",
+    "issue_description": "Clicking the 'Download' button for the annual account statement for 2023 results in a corrupted or empty PDF file.",
+    "priority": "MEDIUM PRIORITY",
+    "status": "In-Progress",
+    "assigned_agent": "Jack Martin",
+    "date_created": "1/30/2024"
+  }
+]
