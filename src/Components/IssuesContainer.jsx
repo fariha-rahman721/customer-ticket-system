@@ -11,7 +11,9 @@ import ResolvedCard from './ResolvedCard';
 
  
 const IssuesContainer = ({fetchPromise}) => {
-    const issues = use(fetchPromise);
+    const data = use(fetchPromise);
+
+    const [issues, setIssues] = useState(data);
 
     const [issue, setIssue] = useState([]);
     const [resolved, setResolved] = useState([]);
@@ -31,9 +33,13 @@ const IssuesContainer = ({fetchPromise}) => {
        const handleResolved = (customer) => {
         const newResolved = [...resolved, customer];
         setResolved(newResolved);
+
         const remainingIssue = issue.filter(iss => iss.ticket_id !== customer.ticket_id);
         setIssue(remainingIssue);
         toast('Task Completed!')
+
+        const remainingIssues = issues.filter(iss => iss.ticket_id !== customer.ticket_id);
+        setIssues(remainingIssues);
        }
            
    
@@ -89,7 +95,7 @@ const IssuesContainer = ({fetchPromise}) => {
         
         
             <h2 className='text-xl font-semibold'>Resolved Status</h2>
-            <div className='shadow p-10 space-y-5 mt-3 bg-gray-100 rounded-xl '>
+            <div className='shadow p-5 space-y-5 mt-3 bg-gray-100 rounded-xl ml-2'>
             {
                 resolved.map(customer => (
                     <ResolvedCard key={customer.ticket_id} customer={customer}>
