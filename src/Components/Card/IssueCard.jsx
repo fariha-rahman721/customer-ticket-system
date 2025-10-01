@@ -8,11 +8,10 @@ const IssueCard = ({customer, handleIssues}) => {
            
             <div className='flex justify-between items-center p-1'>
                 <h2 className="card-title ml-2 text-xl font-semibold">{customer.issue_title}</h2>
-            <button className={`btn m-5 p-2 rounded-3xl  ${customer.status == 'Open'? "bg-green-200 text-green-900" : "bg-yellow-200 text-yellow-900" }`}><span className= {`h-4 w-4  rounded-full mr-1 ${customer.status == 'Open'? "bg-green-600" : "bg-yellow-600"}`} ></span>{customer.status
-       } </button>
+            <button className={`btn m-4 flex justify-between items-center p-2 rounded-3xl ${customer.status == 'Open'? "bg-green-200 text-green-900 font-semibold" : "bg-yellow-200 text-yellow-900 font-semibold" }`}><span className= {`inline-block h-3 w-3 rounded-full bg-green-600 mr-1  ${customer.status == 'Open'? "bg-green-600" : "bg-yellow-600"}`} ></span>{customer.status} </button>
             </div>
-  <div className="card-body p-4">
-    <p>{customer.issue_description}</p>
+  <div className="card-body p-4 ">
+    <p className='mb-2'>{customer.issue_description}</p>
     <div className='flex flex-row justify-between '>
         <div className='flex gap-4'>
         <span className='font-semibold'>{customer.ticket_id}</span>

@@ -76,10 +76,18 @@ const IssuesContainer = ({fetchPromise}) => {
 
               {/* side bar */}
 
-              <div className='mb-5 col-span-4 '>
-                <div className='space-y-2 bg-gray-100 rounded-xl p-2'>
+              <div className='mb-5 col-span-4 ml-5'>
+             
             <h2 className='text-2xl font-semibold'>Task Status</h2>
-            <div className=' space-y-2 mt-3 bg-white rounded-xl p-2 '>
+            
+               {
+                 ( issue.length === 0 && (
+                   <p className='m-2'>Select a ticket to add to Task Status</p>
+                 )
+                        
+                    )}
+               
+            
                 {
                 issue.map(customer => 
                 <TaskCard handleResolved={handleResolved} key={customer.ticket_id} customer= {customer}>
@@ -89,13 +97,21 @@ const IssuesContainer = ({fetchPromise}) => {
             
                 }
                 
-            </div>
+           
                 
-        </div>
+       
         
         
-            <h2 className='text-xl font-semibold'>Resolved Status</h2>
-            <div className='shadow p-5 space-y-5 mt-3 bg-gray-100 rounded-xl ml-2'>
+            <h2 className='text-2xl font-semibold mt-5 ml-1'>Resolved Status</h2>
+            
+
+             {
+                 ( resolved.length === 0 && (
+                   <p className='ml-2'>No resolved tasks yet.</p>
+                 )
+                        
+                    )}
+            
             {
                 resolved.map(customer => (
                     <ResolvedCard key={customer.ticket_id} customer={customer}>
@@ -104,7 +120,7 @@ const IssuesContainer = ({fetchPromise}) => {
                 ))
             }
             
-        </div>
+        
               </div>
            </section>
            
