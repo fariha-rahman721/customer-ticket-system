@@ -51,16 +51,16 @@ const IssuesContainer = ({fetchPromise}) => {
               resolvedTotal= {resolved.length}
             
             ></Banner>
+               
 
-
-            <section className='flex flex-col lg:flex-row gap-2'>
+            <section className='w-11/12  mx-auto flex flex-col lg:flex-row gap-5 mt-10 mb-10'>
              <ToastContainer></ToastContainer>
 
                 <div className=''>
-                    <h3 className='text-xl font-semibold'>Customer Tickets</h3>
-            <div className=' grid grid-cols-1 lg:grid-cols-2 gap-5 mx-auto mt-5 md:grid-cols-1 '>
+                    <h3 className='text-2xl font-semibold'>Customer Tickets</h3>
+           
             
-            <div className='grid grid-cols-1 md:grid-cols-2 col-span-7 gap-2'> 
+            <div className='col-span-7 grid grid-cols-1 lg:grid-cols-2 gap-3 mt-2'> 
                 
             {
             issues.map((customer) => 
@@ -72,17 +72,18 @@ const IssuesContainer = ({fetchPromise}) => {
            } 
               </div>
               </div>
-                </div>
+                
 
               {/* side bar */}
 
-              <div className='mb-5 col-span-4 ml-5'>
+              <div className='mx-auto mb-5 col-span-4'>
              
             <h2 className='text-2xl font-semibold'>Task Status</h2>
+                
             
                {
                  ( issue.length === 0 && (
-                   <p className='m-2'>Select a ticket to add to Task Status</p>
+                   <p className=' m-2'>Select a ticket to add to Task Status</p>
                  )
                         
                     )}
@@ -123,8 +124,8 @@ const IssuesContainer = ({fetchPromise}) => {
         
               </div>
            </section>
-           
-        </div>
+           </div>
+        
     );
 };
 

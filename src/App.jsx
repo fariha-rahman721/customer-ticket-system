@@ -5,6 +5,7 @@ import Navbar from './Components/Navbar'
 import Banner from './Components/Banner'
 import IssuesContainer from './Components/IssuesContainer'
 import { Suspense } from 'react'
+import Footer from './Components/Footer'
 
 
 
@@ -20,6 +21,7 @@ function App() {
 
   return (
     <>
+    
       <header>
         <Navbar></Navbar>
       </header>
@@ -28,6 +30,7 @@ function App() {
           <IssuesContainer fetchPromise= {fetchPromise}></IssuesContainer>
         </Suspense>
       </section>
+      <Footer></Footer>
       
     </>
   )
