@@ -1,12 +1,15 @@
 import React from 'react';
-import cardImg1 from '../assets/vector1.png'
+
 const Banner = ({issueTotal, resolvedTotal}) => {
+    
     return (
         <div className='w-11/12 grid-cols-1 mx-auto grid lg:grid-cols-2'>
             
             <div className=" flex flex-col justify-center items-center gap-5  mx-auto md:flex-row">
                 <div className='mt-10 bg-gradient-to-r from-indigo-500 to-purple-400  text-4xl rounded-xl'>
-             <div className='w-[400px] h-[180px] mx-auto lg:w-[600px] lg:h-[250px] flex flex-col justify-center items-center ' style={{backgroundImage: `url(${cardImg1} )`}}>
+             <div className={`bg-no-repeat  w-[350px] h-[200px] mx-auto lg:w-[600px] lg:h-[250px] flex flex-col justify-center items-center `}
+              style={{ backgroundImage: `url(/vector1.png), url(/vector2-copy.png)`
+                ,backgroundSize: "50% 100%" ,backgroundPosition: "left-center, right-center"}}>
                 <p className='text-white font-semibold text-center'>
                 In-Progress
              </p>
@@ -17,7 +20,8 @@ const Banner = ({issueTotal, resolvedTotal}) => {
             </div>
 
             <div className='mt-5 lg:mt-10 text-4xl  bg-gradient-to-r from-green-400 to-green-600 rounded-xl' >
-                <div className='w-[400px] h-[180px] mx-auto lg:w-[600px] lg:h-[250px] flex flex-col justify-center items-center' style={{backgroundImage: `url(${cardImg1} )`}}>
+                <div className='bg-no-repeat w-[350px] h-[200px] mx-auto lg:w-[600px] lg:h-[250px] flex flex-col justify-center items-center' style={{ backgroundImage: `url(/vector1.png)`
+                , backgroundSize: "50% 100%" ,backgroundPosition: "left-center, right-center"}}>
                     <p className='text-white font-semibold '>
                 Resolved
              </p>

@@ -22,7 +22,7 @@ const IssuesContainer = ({fetchPromise}) => {
         
         const isExist = issue.find(iss => iss.ticket_id === customer.ticket_id);
         if(isExist){
-            toast('In-Progress!')
+            toast('✅In-Progress!')
             return;
         }
 
@@ -36,7 +36,7 @@ const IssuesContainer = ({fetchPromise}) => {
 
         const remainingIssue = issue.filter(iss => iss.ticket_id !== customer.ticket_id);
         setIssue(remainingIssue);
-        toast('Task Completed!')
+        toast('✅Task Completed!')
 
         const remainingIssues = issues.filter(iss => iss.ticket_id !== customer.ticket_id);
         setIssues(remainingIssues);
@@ -53,14 +53,12 @@ const IssuesContainer = ({fetchPromise}) => {
             ></Banner>
                
 
-            <section className='w-11/12  mx-auto flex flex-col lg:flex-row gap-5 mt-10 mb-10'>
-             <ToastContainer></ToastContainer>
-
-                <div className=''>
-                    <h3 className='text-2xl font-semibold'>Customer Tickets</h3>
-           
+            <section className='w-11/12 mx-auto my-10 grid grid-cols-1  lg:grid-cols-12'>
+            <ToastContainer></ToastContainer>
+        <div className='col-span-7'>
+            <h2 className='text-2xl font-semibold'>Customer Tickets</h2>
             
-            <div className='col-span-7 grid grid-cols-1 lg:grid-cols-2 gap-3 mt-2'> 
+            <div className=' grid grid-cols-1  lg:grid-cols-2 gap-4 m-3 mt-5 p-5 w-full'>
                 
             {
             issues.map((customer) => 
@@ -79,16 +77,12 @@ const IssuesContainer = ({fetchPromise}) => {
               <div className='mx-auto mb-5 col-span-4'>
              
             <h2 className='text-2xl font-semibold'>Task Status</h2>
-                
-            
                {
                  ( issue.length === 0 && (
                    <p className=' m-2'>Select a ticket to add to Task Status</p>
                  )
                         
                     )}
-               
-            
                 {
                 issue.map(customer => 
                 <TaskCard handleResolved={handleResolved} key={customer.ticket_id} customer= {customer}>
@@ -97,11 +91,6 @@ const IssuesContainer = ({fetchPromise}) => {
             )
             
                 }
-                
-           
-                
-       
-        
         
             <h2 className='text-2xl font-semibold mt-5 ml-1'>Resolved Status</h2>
             

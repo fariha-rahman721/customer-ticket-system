@@ -4,7 +4,7 @@ const IssueCard = ({customer, handleIssues}) => {
 
    
     return (
-                <div onClick={()=> handleIssues(customer)} key={customer.ticket_id} className="card bg-white card-md shadow-md cursor-pointer rounded-xl mb-3">
+                <div onClick={()=> handleIssues(customer)} key={customer.ticket_id} className="card bg-white card-md shadow-md cursor-pointer rounded-xl mb-3  mr-5 hover:shadow-xl p-3 w-full gap-5">
            
             <div className='flex justify-between items-center p-1 '>
                 <h2 className="card-title ml-2 text-xl font-semibold">{customer.issue_title}</h2>
@@ -12,15 +12,15 @@ const IssueCard = ({customer, handleIssues}) => {
             </div>
   <div className="card-body p-4 ">
     <p className='mb-2'>{customer.issue_description}</p>
-    <div className='flex flex-row justify-between '>
-        <div className='flex gap-4'>
+    <div className='flex flex-row justify-between gap-3 mr-3'>
+        <div className='flex gap-2'>
         <span className='font-semibold'>{customer.ticket_id}</span>
         <p className='text-red-500 font-semibold'>{customer.priority}</p>
         </div>
          <div className='flex gap-4 justify-end'>
             <p className=''>{customer.assigned_agent
              }</p>
-                     <span className=''>{customer.
+                     <span className='mr-3'>{customer.
              date_created}</span>
          </div>
 
