@@ -3,7 +3,7 @@ import React from 'react';
 const Banner = ({issueTotal, resolvedTotal}) => {
     
     return (
-        <div className='w-11/12 grid-cols-1 mx-auto grid lg:grid-cols-2'>
+        <div className='w-11/12 mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 my-10'>
             
             <div className=" flex flex-col justify-center items-center gap-5  mx-auto md:flex-row">
                 <div className='mt-10 bg-gradient-to-r from-indigo-500 to-purple-400  text-4xl rounded-xl'>

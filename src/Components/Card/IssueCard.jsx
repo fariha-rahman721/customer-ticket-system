@@ -12,7 +12,7 @@ const IssueCard = ({customer, handleIssues}) => {
             </div>
   <div className="card-body p-4 ">
     <p className='mb-2'>{customer.issue_description}</p>
-    <div className='flex flex-row justify-between gap-3 mr-3'>
+    <div className='flex flex-col lg:flex-row justify-between gap-3 mr-3'>
         <div className='flex gap-2'>
         <span className='font-semibold'>{customer.ticket_id}</span>
         <p className='text-red-500 font-semibold'>{customer.priority}</p>
